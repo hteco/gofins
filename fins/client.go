@@ -299,7 +299,7 @@ func (c *Client) listenLoop() {
 		if err != nil {
 			// do not complain when connection is closed by user
 			if !c.closed {
-				log.Fatal(err)
+				log.Println("reader err: ", err)
 			}
 			break
 		}
